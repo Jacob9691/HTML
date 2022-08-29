@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+  <head lang="da">
+    <title>Jacobs Visitkort</title>
+
+    <!-- Sætter karakterne til utf-8 standart -->
+    <meta charset="utf-8">
+
+    <!-- Gør at scaling ikke bliver dårlig angående browser -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+
+    <!-- Load external CSS styles -->
+    <link rel="stylesheet" href="main.css"
+
+    <!-- Load external JavaScript -->
+    <script src="main.js"></script> 
+
+  </head>
+  <body>
+
+    <h1>Jacobs Visitkort</h1>
+    
+    <!-- Opsætter en class for mine tabs og gør dem til knapper -->
+    <div class="tab">
+      <button class="tablinks" onclick="openTab(event, 'Forside')">Forside</button>
+      <button class="tablinks" onclick="openTab(event, 'Kontakt')">Kontakt</button>
+      <button class="tablinks" onclick="openTab(event, 'CV')">CV</button>
+      <a href="https://github.com/Jacob9691" target="_blank"><button>GitHub</button></a>
+    </div>
+
+    <!-- Indholdet af forsiden -->
+    <div id="Forside" class="tabcontent" style="display:block">
+      <h3>Jacob Woetmann Kastberg</h3>
+
+      <!-- Indsætter et billede med en klasse type "rounded", som gør der er runde kanter -->
+      <img src="https://cdn.discordapp.com/attachments/565935412737081354/1011575447127072788/18BCB94C-F193-4DB5-B96B-CD09C762DADF.jpg" 
+      alt="Billede" width="250" height="333" class="rounded" style="float:left">
+
+      <!-- her laver jeg en pre med id = "forsideBeskrivelse", så jeg kan lave om på den i CSS -->
+      <pre id="forsideBeskrivelse">
+Jeg er under arbejde på skoleoplæring i 
+data- og kommunikationsuddanelsen, 
+og har stor interesse for data og
+programmering og er meget villig til
+at kaste mig ud i noget nyt indenfor
+mit emne. I min fritid er jeg sammen med 
+mine venner, eller spiller med dem online. 
+      </pre>
+    </div>
+   
+    <!-- Indholdet af Kontakt -->
+    <div id="Kontakt" class="tabcontent">
+      <h3>Kontakt mig:</h3>
+
+      <!-- her laver jeg en pre med id = "kontaktBeskrivelse", så jeg kan lave om på den i CSS. Jeg indsætter også weblinks af billedeikoner og links til hjemmesider -->
+      <pre id="kontaktBeskrivelse">
+    <img src="https://iconarchive.com/download/i91323/icons8/windows-8/Mobile-Phone.ico" alt="mailIcon" width ="25" height="25" style="float:left"></a> 21977880
+    <img src="https://cdn-icons-png.flaticon.com/512/761/761755.png" alt="mailIcon" width ="25" height="25" style="float:left"></a> jacob.w.kastberg@hotmail.com
+    <img src="https://cdn-icons-png.flaticon.com/512/25/25694.png" alt="homeIcon" width ="25" height="25" style="float:left"></a> Paludan Müllers vej 44, 2.36
+    <img src="https://www.iconpacks.net/icons/2/free-linkedin-icon-2166-thumb.png" alt="linklnIcon" width ="30" height="30" style="float:left"></a><a href="https://www.linkedin.com/in/jacob-woetmann-kastberg-26908a232/" target="_blank">https://www.linkedin.com/in/jacob-woetmann-kastberg-26908a232/</a>
+    <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="githubIcon" width ="25" height="25" style="float:left"></a> <a href="https://github.com/Jacob9691" target="_blank">https://github.com/Jacob9691</a>
+      </pre>
+      <h5>Send en besked til mig:</h5>
+
+      <!-- Her laver jeg en form, som bruger hjemmesiden formspree, der gør jeg kan sende mails til min mail. Jeg laver 2 inputs som er required, dermed er der et tekstarea og en knap der sender. -->
+      <form action="https://formspree.io/f/xdojkadr" method="POST">
+        <input type="text" name="Name" placeholder="Full name" required>
+        <input type="email" name="Email" placeholder="Email" required>
+        <textarea name="Message" placeholder="Message" required></textarea>
+        <button type="submit">Send</button>
+      </form>
+    </div>
+
+    <!-- Indholdet af CV -->
+    <div id="CV" class="tabcontent">
+      <h3>CV</h3>
+
+    <!-- Laver et link til PDF'ens lokation, hvor den så downloader den -->
+      <h6><a href = "CV - Jacob Woetmann Kastberg.pdf" download >  
+        <b> Download som PDF her </b>  
+      </a></h6>
+    
+      <!-- Laver en iframe som sætter filen ind i pdf form. -->
+      <iframe src= "CV - Jacob Woetmann Kastberg.pdf" alt="CV" width="100%" height="750"></iframe>
+
+    </div>
+    
+    <!-- Her laver jeg en footer class, som indholder de vigtigest informationer. -->
+    <footer class="foot">
+      <pre class="footLinks">
+    Tlf. 21977880
+    Mail. jacob.w.kastberg@hotmail.com
+      </pre>
+    </footer>
+  </body>
+</html>
